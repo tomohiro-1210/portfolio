@@ -1,0 +1,122 @@
+// 変数読み込み
+@use "../common/variable" as var;
+
+// l-contact
+.l-contact {
+    width: 100%;
+    background-color: var.$skyblue-bg;
+
+    &__inner {
+        max-width: 1200px;
+        padding: 50px 20px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // Contact
+    &__title {
+        text-align: left;
+        color: var.$white-font;
+        font-family: var.$font-en;
+        font-weight: bold;
+        font-size: 80px;   
+    }
+
+    // ボタンなど
+    &__right {
+        max-width: 600px;
+    }
+
+    // 受け付けております
+    &__text {
+        margin-bottom: 20px;
+        text-align: center;
+        color: var.$white-font;
+        font-family: var.$font-ja;
+        font-size: 24px;   
+        // 両端の装飾
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text::before,
+    &__text::after {
+        content: '';
+        width: 2px;
+        height: 30px;
+        background-color: var.$white-font;
+    }
+    
+    &__text::before {
+        margin-right: 20px;
+        transform: rotate(-35deg)
+    }
+    &__text::after {
+        margin-left: 20px;
+        transform: rotate(35deg)
+    }
+
+    // お問い合わせフォームへのボタン
+    &__btn {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 17px 115px;
+        background-color: var.$white-bg;
+        border: solid 2px var.$black-bg;
+        text-align: center;
+        color: var.$black-bg;
+        font-family: var.$font-en;
+        font-weight: bold;
+        font-size: 24px;  
+    }
+
+}
+
+
+
+@media screen and (max-width:768px) {
+    // l-contact
+    .l-contact {
+
+        &__inner {
+            display: block;
+        }
+
+        // Contact
+        &__title {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 60px;   
+        }
+
+        // ボタンなど
+        &__right {
+            max-width: auto;
+            margin: 0 auto;
+        }
+
+        // 受け付けております
+        &__text {
+            margin-bottom: 30px;
+            font-size: 20px;   
+        }
+        &__text::before,
+        &__text::after {
+            content: '';
+            width: 2px;
+            height: 60px;
+        }
+
+        // お問い合わせフォームへのボタン
+        &__btn {
+            max-width: 400px;
+            width: fit-content;
+            padding: 17px 80px;
+            font-size: 20px;  
+        }
+
+    }
+}
+

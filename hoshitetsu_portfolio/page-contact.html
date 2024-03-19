@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    
+    <!-- style.css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Hoshitetsu Portfolio</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="l-header">
+      <div class="l-header__inner">
+        <!-- ロゴ -->
+        <div class="site-logo">
+          <img src="./assets/img/logo-hoshitetsu.png" alt="hoshitetsu-logo">
+          <p>Hoshitetsu<br>
+            Portfolio</p>
+        </div>
+
+        <!-- メニュー -->
+        <nav class="l-header__nav tb-on">
+          <ul class="l-header__menu-list">
+            <li class="l-header__menu-item"><a href="#">TOP</a></li>
+            <li class="l-header__menu-item"><a href="#">Works</a></li>
+            <li class="l-header__menu-item"><a href="#">News</a></li>
+            <li class="l-header__menu-item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- ハンバーガーメニュー -->
+        <div class="l-header__sp-menu sp-on">
+          <div class="l-header__hamburgur">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="l-header__menu">Menu</p>
+          <p class="l-header__close">Close</p>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- スマホメニュー -->
+    <div class="l-sp-menu">
+      <!-- ロゴ -->
+      <a href="#" class="site-logo">
+        <img src="./assets/img/logo-hoshitetsu.png" alt="hoshitetsu-logo">
+        <p>Hoshitetsu<br>
+          Portfolio</p>
+      </a>
+
+        <!-- メニュー -->
+        <nav class="l-sp-menu__nav">
+          <ul class="l-sp-menu__menu-list">
+            <li class="l-sp-menu__menu-item"><a href="#">TOP</a></li>
+            <li class="l-sp-menu__menu-item"><a href="#">Works</a></li>
+            <li class="l-sp-menu__menu-item"><a href="#">News</a></li>
+            <li class="l-sp-menu__menu-item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+          <!-- インスタグラム -->
+          <a href="https://instagram.com" class="instagram">
+            <img src="./assets/img/logo-instagram.png" alt="">
+            <span>Hoshitetsu<br>
+              Instagram</span>
+          </a>
+
+    </div>
+    <!-- /スマホメニュー -->
+
+    <!-- main -->
+    <main>
+      <section class="l-inner p-contact" id="contact">
+        <!-- 見出し -->
+        <h1 class="c-section-title"><span class="c-section-title--ja">お問い合わせ</span><span class="c-section-title--en">Contact</span></h1>
+
+        <!-- お問い合わせフォーム -->
+        <form action="method" class="p-contact__form">        
+          <p class="p-contact__form__text">この度はご訪問いただきありがとうございます。<br><br>コーディングやWordpressの構築、相談は下記フォームより随時承っております。<br><br>いつでもお気軽にご相談くださいませ。</p>
+          <p class="p-contact__form__title">お問い合わせフォーム</p>
+
+          <!-- 会社名 -->
+          <div class="p-contact__form__item">
+            <p>会社名(フリーランスの方は個人と入力ください)</p>
+            <input type="text" name="company">
+          </div>
+
+          <!-- 名前 -->
+          <div class="p-contact__form__item">
+            <p><span class="required">必須</span>名前</p>
+            <input type="text" name="name">
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="p-contact__form__item">
+            <p><span class="required">必須</span>メールアドレス</p>
+            <input type="text" name="email">
+          </div>
+
+          <!-- 電話番号 -->
+          <div class="p-contact__form__item">
+            <p><span class="required">必須</span>電話番号</p>
+            <input type="text" name="tel">
+          </div>
+
+          <!-- 住所 -->
+          <div class="p-contact__form__item">
+            <p><span class="required">必須</span>住所</p>
+            <input type="text" name="address">
+          </div>
+
+          <!-- お問い合わせ内容 -->
+          <div class="p-contact__form__item">
+            <p><span class="required">必須</span>お問い合わせ内容</p>
+            <textarea name="contact" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="p-contact__form__item button">
+            <button type="submit" class="p-contact__form__button">送信</button>
+          </div>
+          
+        </form>
+      </section>
+    </main>
+    <!-- /main -->
+
+    <!-- footer -->
+    <footer class="l-footer">
+      <div class="l-footer__inner">
+        <!-- ロゴ -->
+        <a href="#" class="site-logo">
+          <img src="./assets/img/logo-hoshitetsu.png" alt="hoshitetsu-logo">
+          <p>Hoshitetsu<br>
+            Portfolio</p>
+        </a>
+
+        <!-- コンテンツ -->
+        <div class="l-footer__content">
+          <!-- メニュー -->
+          <nav class="l-footer__nav">
+            <ul class="l-footer__menu-list">
+              <li class="l-footer__menu-item"><a href="#">TOP</a></li>
+              <li class="l-footer__menu-item"><a href="#">Works</a></li>
+              <li class="l-footer__menu-item"><a href="#">News</a></li>
+              <li class="l-footer__menu-item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- インスタグラム -->
+          <a href="https://instagram.com" class="instagram">
+            <img src="./assets/img/logo-instagram.png" alt="">
+            <span>Hoshitetsu<br>
+              Instagram</span>
+          </a>
+
+          <!-- コピー -->
+          <p class="l-footer__copy">©Hoshitetsu All right 2024</p>
+        </div>
+
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- jquery/js -->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+    <script src="./assets/js/common.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// commonフォルダ
+@use './common/reset';
+@use './common/common';
+
+// layoutフォルダ
+@use './layout/l-header';
+@use './layout/l-contact';
+@use './layout/l-footer';
+@use './layout/l-sp-menu';
+
+// projectフォルダ
+@use './project/index';
+@use './project/news';
+@use './project/works';
+@use './project/contact';

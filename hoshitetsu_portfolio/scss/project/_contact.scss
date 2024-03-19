@@ -1,0 +1,122 @@
+// 変数読み込み
+@use "../common/variable" as var;
+
+// contact
+#contact{
+    margin: 100px auto;
+}
+
+.p-contact {
+    &__form {
+        max-width: 800px;
+        margin: 0 auto;
+        // 説明文
+        &__text {
+            margin: 60px 0;
+            color: var.$black-font;
+            font-size: 20px;
+            font-family: var.$font-ja;
+            font-weight: normal;
+            font-weight: bold;
+        }
+        // フォームタイトル
+        &__title {
+            color: var.$blue-font;
+            font-size: 30px;
+            font-family: var.$font-ja;
+            font-weight: bold;
+        }
+
+        // 名前など
+        &__item {
+            margin-top: 20px;
+            .required{
+                margin: 0 15px 0px 0px;
+                padding: 3px 10px;
+                color: var.$white-font;
+                background-color: var.$red-bg;
+                font-size: 12px;
+                font-family: var.$font-ja;
+                font-weight: bold;
+            }
+            p{
+                margin: 0 0 10px 10px;
+                color: var.$black-font;
+                font-size: 16px;
+                font-family: var.$font-ja;
+                font-weight: bold;
+            }
+            input, textarea{
+                width: calc(100% - 24px);
+                border-radius: 10px;
+                font-size: 16px;
+                padding: 5px 10px;
+                border: solid 2px var.$black-bg;
+            }
+        }
+        &__item.button{
+            width: 100%;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        // ボタン
+        &__button{
+            width: fit-content;
+            margin: 30px auto 0;
+            padding: 8px 68px;
+            border: solid 1px var.$blue-font;
+            box-shadow: 4px 4px 4px rgba($color: var.$black-bg, $alpha: 0.5);
+            border-radius: 45px;
+            color: var.$white-font;
+            background-color: var.$blue-font;
+            font-size: 30px;
+            font-family: var.$font-ja;
+            font-weight: bold;
+        }
+    }
+
+}
+@media screen and (max-width:768px) {
+    #contact{
+        margin: 60px auto;
+    }
+    .p-contact {
+        &__form {
+            // 説明文
+            &__text {
+                margin: 30px 0;
+                font-size: 16px;
+            }
+            // フォームタイトル
+            &__title {
+                font-size: 24px;
+            }
+    
+            // 名前など
+            &__item {
+                .required{
+                    margin: 0 10px 0px 0px;
+                    padding: 2px 8px;
+                    font-size: 10px;
+                }
+                p{
+                    margin: 0 0 5px 10px;
+                    font-size: 14px;
+                }
+                input, textarea{
+                    font-size: 14px;
+                }
+            }
+    
+            // ボタン
+            &__button{
+                width: fit-content;
+                margin: 30px auto 0;
+                padding: 7px 55px;
+                font-size: 24px;
+            }
+        }
+    
+    }
+}

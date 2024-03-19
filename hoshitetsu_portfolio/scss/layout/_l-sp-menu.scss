@@ -1,0 +1,46 @@
+// 変数読み込み
+@use "../common/variable" as var;
+
+.l-sp-menu {
+    max-width: 768px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var.$blue-bg;
+    border-top: solid 1px var.$white-font;
+    display: none;
+    // ロゴ
+    .site-logo{
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    // メニュー
+    &__nav {
+        margin-bottom: 30px;
+    }
+    &__menu-list {
+        padding: 30px 0;
+        border-top: solid 1px var.$white-font;
+        border-bottom: solid 1px var.$white-font;
+    }
+    &__menu-item {
+        a{
+            color: var.$white-font;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: var.$font-en;
+            text-align: center;
+        }
+    }
+    &__menu-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    // インスタグラム
+    .instagram {
+        justify-content: center;
+    }
+}
+.l-sp-menu.appear {
+    display: block;
+
+}

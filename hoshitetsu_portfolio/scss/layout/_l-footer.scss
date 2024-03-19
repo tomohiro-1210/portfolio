@@ -1,0 +1,116 @@
+// 変数読み込み
+@use "../common/variable" as var;
+
+.l-footer {
+    width: 100%;
+    background-color: var.$blue-bg;
+    // インナー
+    &__inner {
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 30px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // メニュー
+    &__nav {
+        margin-bottom: 13px;
+        
+    }
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+    &__menu-item {
+        a{
+            color: var.$white-font;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: var.$font-en;
+        }
+    }
+    &__menu-item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    // インスタグラム
+    .instagram {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin-bottom: 13px;
+        img{
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+        }
+        span{
+          color: var.$white-font;
+          font-family: var.$font-en;
+          font-style: italic;
+          font-weight: bold;
+          font-size: 14px;
+        }
+    }
+    
+        // コピーライト
+    &__copy {
+        text-align: right;
+        color: var.$white-font;
+        font-family: var.$font-en;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    .l-footer {
+        // インナー
+        &__inner {
+            padding: 20px;
+            display: block;
+        }
+
+        // ロゴ
+        .site-logo{
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+    
+        // メニュー
+        &__nav {
+            margin-bottom: 20px;
+        }
+        &__menu-list {
+            justify-content: center;
+        }
+        &__menu-item {
+            a{
+                font-size: 14px;
+            }
+        }
+        &__menu-item:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        // インスタグラム
+        .instagram {
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    
+        // コピーライト
+        &__copy {
+            text-align: center;
+        }
+    
+    }
+}
