@@ -1,0 +1,5 @@
+@use "../common/variable" as var;
+
+.green{
+  color: var.$green;
+}

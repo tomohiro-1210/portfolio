@@ -1,3 +1,10 @@
-@forward "./common/_init_.scss";
-@forward "./layout/_init_.scss";
-@forward "./project/_init_.scss";
+@charset "UTF-8";
+
+// commonフォルダ
+@use './common/reset';
+@use './common/common';
+
+// layoutフォルダ
+@use './layout/l-header';
+@use './layout/l-footer';
+
