@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    
+    <!-- style.css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Hoshitetsu Portfolio</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="l-header">
+      <div class="l-header__inner">
+        <!-- ロゴ -->
+        <div class="site-logo">
+          <img src="./assets/img/logo-hoshitetsu.png" alt="hoshitetsu-logo">
+          <p>Hoshitetsu<br>
+            Portfolio</p>
+        </div>
+
+        <!-- メニュー -->
+        <nav class="l-header__nav pc-on">
+          <ul class="l-header__menu-list">
+            <li class="l-header__menu-item"><a href="./index.html">TOP</a></li>
+            <li class="l-header__menu-item"><a href="./archive-works.html">Works</a></li>
+            <li class="l-header__menu-item"><a href="archive-news.html">News</a></li>
+            <li class="l-header__menu-item"><a href="page-contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- ハンバーガーメニュー -->
+        <div class="l-header__sp-menu tb-on">
+          <div class="l-header__hamburgur">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="l-header__menu">Menu</p>
+          <p class="l-header__close">Close</p>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- ローディング -->
+    <div class="loading" id="loading">
+      <div class="loading__inner">
+        <div class="loading__load">Loading Now…</div>
+        <div class="loading__logo" id="loading-logo">
+          <img src="./assets/img/logo-hoshitetsu.png" alt="logo-hoshitetsu">
+        </div>
+        <div class="loading__percent" id="percent"></div>
+      </div>
+
+      </div>
+    <!-- /ローディング -->
+
+    <!-- スマホメニュー -->
+    <div class="l-sp-menu">
+      <!-- ロゴ -->
+      <a href="./index.html" class="site-logo">
+        <img src="./assets/img/logo-hoshitetsu.png" alt="hoshitetsu-logo">
+        <p>Hoshitetsu<br>
+          Portfolio</p>
+      </a>
+
+        <!-- メニュー -->
+        <nav class="l-sp-menu__nav">
+          <ul class="l-sp-menu__menu-list">
+            <li class="l-sp-menu__menu-item"><a href="./index.html">TOP</a></li>
+            <li class="l-sp-menu__menu-item"><a href="./archive-works.html">Works</a></li>
+            <li class="l-sp-menu__menu-item"><a href="archive-news.html">News</a></li>
+            <li class="l-sp-menu__menu-item"><a href="page-contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+          <!-- インスタグラム -->
+          <a href="https://instagram.com" class="instagram">
+            <img src="./assets/img/logo-instagram.png" alt="">
+            <span>Hoshitetsu<br>
+              Instagram</span>
+          </a>
+
+    </div>
+    <!-- /スマホメニュー -->
+
+    <!-- main -->
+    <main>
+      <section class="l-inner p-archive-news" id="news">
+        <!-- タイトル -->
+        <h1 class="c-section-title"><span class="c-section-title--ja">お知らせ</span><span class="c-section-title--en">News</span></h1>
+        <!-- news -->
+        <div class="p-archive-news__list">
+          <!-- news-item -->
+          <a href="./single-news.html" class="p-archive-news__item">
+            <img src="./assets/img/news-img01.png" alt="news-img01" class="p-archive-news__img">
+            <div class="p-archive-news__content">
+              <p class="p-archive-news__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+              <p class="p-archive-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <div class="p-archive-news__down">
+                <div class="p-archive-news__tags">
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                </div>
+                <p class="p-archive-news__date">2024.04.01</p>
+              </div>
+            </div>
+          </a>
+          <!-- news-item -->
+          <a href="./single-news.html" class="p-archive-news__item">
+            <img src="./assets/img/news-img02.png" alt="news-img02" class="p-archive-news__img">
+            <div class="p-archive-news__content">
+              <p class="p-archive-news__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+              <p class="p-archive-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <div class="p-archive-news__down">
+                <div class="p-archive-news__tags">
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                </div>
+                <p class="p-archive-news__date">2024.04.01</p>
+              </div>
+            </div>
+          </a>
+          <!-- news-item -->
+          <a href="./single-news.html" class="p-archive-news__item">
+            <img src="./assets/img/news-img03.png" alt="news-img03" class="p-archive-news__img">
+            <div class="p-archive-news__content">
+              <p class="p-archive-news__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+              <p class="p-archive-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <div class="p-archive-news__down">
+                <div class="p-archive-news__tags">
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                </div>
+                <p class="p-archive-news__date">2024.04.01</p>
+              </div>
+            </div>
+          </a>
+          <!-- news-item -->
+          <a href="./single-news.html" class="p-archive-news__item">
+            <img src="./assets/img/news-img01.png" alt="news-img01" class="p-archive-news__img">
+            <div class="p-archive-news__content">
+              <p class="p-archive-news__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+              <p class="p-archive-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <div class="p-archive-news__down">
+                <div class="p-archive-news__tags">
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                </div>
+                <p class="p-archive-news__date">2024.04.01</p>
+              </div>
+            </div>
+          </a>
+          <!-- news-item -->
+          <a href="./single-news.html" class="p-archive-news__item">
+            <img src="./assets/img/news-img02.png" alt="news-img02" class="p-archive-news__img">
+            <div class="p-archive-news__content">
+              <p class="p-archive-news__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+              <p class="p-archive-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <div class="p-archive-news__down">
+                <div class="p-archive-news__tags">
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                </div>
+                <p class="p-archive-news__date">2024.04.01</p>
+              </div>
+            </div>
+          </a>
+          <!-- news-item -->
+          <a href="./single-news.html" class="p-archive-news__item">
+            <img src="./assets/img/news-img03.png" alt="news-img03" class="p-archive-news__img">
+            <div class="p-archive-news__content">
+              <p class="p-archive-news__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+              <p class="p-archive-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <div class="p-archive-news__down">
+                <div class="p-archive-news__tags">
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                  <span class="p-archive-news__tag">#カテゴリー</span>
+                </div>
+                <p class="p-archive-news__date">2024.04.01</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- pager -->
+        <div class="c-pager">
+          <a href="#" class="c-pager__arrow">
+            <span><</span>
+          </a>
+          <a href="#" class="c-pager__arrow">
+            <span>1</span>
+          </a>
+          <a href="#" class="c-pager__arrow">
+            <span>2</span>
+          </a>
+          <a href="#" class="c-pager__arrow">
+            <span>3</span>
+          </a>
+          <a href="#" class="c-pager__arrow">
+            <span>…</span>
+          </a>
+          <a href="#" class="c-pager__arrow">
+            <span>10</span>
+          </a>
+          <a href="#" class="c-pager__arrow">
+            <span>></span>
+          </a>
+        </div>
+        <!-- /pager -->
+      </section>
+
+    </main>
+    <!-- /main -->
+
+    <!-- お問い合わせフォーム誘導 -->
+    <section class="l-contact">
+      <div class="l-contact__inner">
+        <p class="l-contact__title">Contact</p>
+        <div class="l-contact__right">
+          <p class="l-contact__text">お問い合わせはこちらより<br class="sp-on">随時受け付けています</p>
+          <a href="./page-contact.html" class="l-contact__btn">Contact Form</a>
+        </div>
+      </div>
+    </section>
+    <!-- /お問い合わせフォーム誘導 -->
+
+    <!-- footer -->
+    <footer class="l-footer">
+      <div class="l-footer__inner">
+        <!-- ロゴ -->
+        <a href="./index.html" class="site-logo">
+          <img src="./assets/img/logo-hoshitetsu.png" alt="hoshitetsu-logo">
+          <p>Hoshitetsu<br>
+            Portfolio</p>
+        </a>
+
+        <!-- コンテンツ -->
+        <div class="l-footer__content">
+          <!-- メニュー -->
+          <nav class="l-footer__nav">
+            <ul class="l-footer__menu-list">
+              <li class="l-footer__menu-item"><a href="./index.html">TOP</a></li>
+              <li class="l-footer__menu-item"><a href="./archive-works.html">Works</a></li>
+              <li class="l-footer__menu-item"><a href="./archive-news.html">News</a></li>
+              <li class="l-footer__menu-item"><a href="./page-contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- インスタグラム -->
+          <a href="https://instagram.com" class="instagram">
+            <img src="./assets/img/logo-instagram.png" alt="">
+            <span>Hoshitetsu<br>
+              Instagram</span>
+          </a>
+
+          <!-- コピー -->
+          <p class="l-footer__copy">©Hoshitetsu All right 2024</p>
+        </div>
+
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- jquery/js -->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    
+</body>
+</html>

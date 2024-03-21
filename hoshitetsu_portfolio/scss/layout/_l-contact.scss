@@ -71,11 +71,29 @@
         font-weight: bold;
         font-size: 24px;  
     }
+    &__btn:hover{
+        color: var.$white-font;
+        background-color: var.$black-bg;
+        opacity: 1;
+        transition: all 0.3s;
+    }
 
 }
 
 
 
+@media screen and (max-width:920px) {
+    // l-contact
+    .l-contact {
+        &__text::before,
+        &__text::after {
+            content: '';
+            width: 2px;
+            height: 60px;
+        }
+
+    }
+}
 @media screen and (max-width:768px) {
     // l-contact
     .l-contact {
@@ -101,12 +119,6 @@
         &__text {
             margin-bottom: 30px;
             font-size: 20px;   
-        }
-        &__text::before,
-        &__text::after {
-            content: '';
-            width: 2px;
-            height: 60px;
         }
 
         // お問い合わせフォームへのボタン

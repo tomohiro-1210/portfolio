@@ -25,17 +25,17 @@
         </div>
 
         <!-- メニュー -->
-        <nav class="l-header__nav tb-on">
+        <nav class="l-header__nav pc-on">
           <ul class="l-header__menu-list">
-            <li class="l-header__menu-item"><a href="#">TOP</a></li>
-            <li class="l-header__menu-item"><a href="#">Works</a></li>
-            <li class="l-header__menu-item"><a href="#">News</a></li>
-            <li class="l-header__menu-item"><a href="#">Contact</a></li>
+            <li class="l-header__menu-item"><a href="./index.html">TOP</a></li>
+            <li class="l-header__menu-item"><a href="./archive-works.html">Works</a></li>
+            <li class="l-header__menu-item"><a href="archive-news.html">News</a></li>
+            <li class="l-header__menu-item"><a href="page-contact.html">Contact</a></li>
           </ul>
         </nav>
 
         <!-- ハンバーガーメニュー -->
-        <div class="l-header__sp-menu sp-on">
+        <div class="l-header__sp-menu tb-on">
           <div class="l-header__hamburgur">
             <span></span>
             <span></span>
@@ -48,10 +48,23 @@
     </header>
     <!-- /header -->
 
+    <!-- ローディング -->
+    <div class="loading" id="loading">
+      <div class="loading__inner">
+        <div class="loading__load">Loading Now…</div>
+        <div class="loading__logo" id="loading-logo">
+          <img src="./assets/img/logo-hoshitetsu.png" alt="logo-hoshitetsu">
+        </div>
+        <div class="loading__percent" id="percent"></div>
+      </div>
+
+      </div>
+    <!-- /ローディング -->
+
     <!-- スマホメニュー -->
     <div class="l-sp-menu">
       <!-- ロゴ -->
-      <a href="#" class="site-logo">
+      <a href="./index.html" class="site-logo">
         <img src="./assets/img/logo-hoshitetsu.png" alt="hoshitetsu-logo">
         <p>Hoshitetsu<br>
           Portfolio</p>
@@ -60,10 +73,10 @@
         <!-- メニュー -->
         <nav class="l-sp-menu__nav">
           <ul class="l-sp-menu__menu-list">
-            <li class="l-sp-menu__menu-item"><a href="#">TOP</a></li>
-            <li class="l-sp-menu__menu-item"><a href="#">Works</a></li>
-            <li class="l-sp-menu__menu-item"><a href="#">News</a></li>
-            <li class="l-sp-menu__menu-item"><a href="#">Contact</a></li>
+            <li class="l-sp-menu__menu-item"><a href="./index.html">TOP</a></li>
+            <li class="l-sp-menu__menu-item"><a href="./archive-works.html">Works</a></li>
+            <li class="l-sp-menu__menu-item"><a href="archive-news.html">News</a></li>
+            <li class="l-sp-menu__menu-item"><a href="page-contact.html">Contact</a></li>
           </ul>
         </nav>
 
@@ -126,7 +139,7 @@
 
           <!-- 送信ボタン -->
           <div class="p-contact__form__item button">
-            <button type="submit" class="p-contact__form__button">送信</button>
+            <button type="submit" class="c-button">送信</button>
           </div>
           
         </form>
@@ -149,13 +162,12 @@
           <!-- メニュー -->
           <nav class="l-footer__nav">
             <ul class="l-footer__menu-list">
-              <li class="l-footer__menu-item"><a href="#">TOP</a></li>
-              <li class="l-footer__menu-item"><a href="#">Works</a></li>
-              <li class="l-footer__menu-item"><a href="#">News</a></li>
-              <li class="l-footer__menu-item"><a href="#">Contact</a></li>
+              <li class="l-footer__menu-item"><a href="./index.html">TOP</a></li>
+              <li class="l-footer__menu-item"><a href="./archive-works.html">Works</a></li>
+              <li class="l-footer__menu-item"><a href="./archive-news.html">News</a></li>
+              <li class="l-footer__menu-item"><a href="./page-contact.html">Contact</a></li>
             </ul>
           </nav>
-
           <!-- インスタグラム -->
           <a href="https://instagram.com" class="instagram">
             <img src="./assets/img/logo-instagram.png" alt="">
@@ -176,6 +188,7 @@
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
   crossorigin="anonymous"></script>
+  <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script src="./assets/js/common.js"></script>
     
 </body>

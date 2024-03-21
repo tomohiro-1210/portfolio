@@ -1,8 +1,18 @@
 @use "variable" as var;
 
+// 共通設定
 html{
     background-color: var.$white-bg;
     color: var.$black-font;
+}
+
+main{
+  padding-top: 90px;
+}
+@media screen and (max-width:768px) {
+  main{
+    padding-top: 70px;
+  }
 }
 
 img{
@@ -20,12 +30,19 @@ a{
     display: block;
 }
 
+// l-inner
+.l-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 // デバイスでのオンオフ
 .pc-on{
   display: block;
 }
 .tb-on{
-  display: block;
+  display: none;
 }
 .sp-on{
   display: none;
@@ -46,7 +63,7 @@ a{
     display: none;
   }
   .tb-on{
-    display: none;
+    display: block;
   }
   .sp-on{
     display: block;
@@ -120,6 +137,7 @@ a{
   font-family: var.$font-ja;
   text-align: center;
   &--ja{
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 48px;
     // 文字の装飾
@@ -130,7 +148,7 @@ a{
   &--ja::before,
   &--ja::after {
     content: '';
-    width: calc(40% - 20px);
+    width: calc(40%);
     height: 4px;
     background-color: var.$blue-font;
   }
@@ -144,6 +162,7 @@ a{
   &--en{
     display: block;
     text-align: center;
+    font-weight: bold;
     font-size: 36px;
   }
   
@@ -152,19 +171,20 @@ a{
   .c-section-title {
     // 日本語
     &--ja{
-      font-size: 30px;
+      margin-bottom: 5px;
+      font-size: 25px;
     }
     &--ja::before,
     &--ja::after {
       content: '';
-      width: calc(50% - 20px);
+      width: calc(50%);
       height: 2px;
     }
     &--ja::before {
-      margin-right: 10px;
+      margin-right: 15px;
     }
     &--ja::after {
-      margin-left: 10px;
+      margin-left: 15px;
     }
 
     // 英語
@@ -184,6 +204,7 @@ a{
   font-family: var.$font-ja;
   text-align: center;
   &--ja{
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 48px;
     // 文字の装飾
@@ -193,7 +214,7 @@ a{
   }
   &--ja::after{
     content: '';
-    width: calc(100% - 20px);
+    width: calc(100%);
     height: 4px;
     background-color: var.$blue-font;
   }
@@ -204,6 +225,7 @@ a{
   &--en{
     display: block;
     text-align: left;
+    font-weight: bold;
     font-size: 36px;
   }
 
@@ -212,7 +234,7 @@ a{
   .c-section-title--left {
     // 日本語
     &--ja{
-      font-size: 30px;
+      font-size: 25px;
     }
     &--ja::before,
     &--ja::after {
@@ -238,6 +260,7 @@ a{
   font-family: var.$font-ja;
   text-align: center;
   &--ja{
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 48px;
     // 文字の装飾
@@ -258,6 +281,7 @@ a{
   &--en{
     display: block;
     text-align: right;
+    font-weight: bold;
     font-size: 36px;
   }
 
@@ -266,7 +290,7 @@ a{
   .c-section-title--right {
     // 日本語
     &--ja{
-      font-size: 30px;
+      font-size: 25px;
     }
     &--ja::before,
     &--ja::after {
@@ -283,9 +307,163 @@ a{
   }
 }
 
-// l-inner
-.l-inner{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+// pager
+.c-pager {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__arrow {
+    width: 30px;
+    height: 30px;
+    border: solid 1px var.$blue-font;
+    
+    // 位置調整
+    position: relative;
+  
+    span{
+      color: var.$blue-font;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: var.$font-ja;
+  
+      // 位置調整
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+  }
+  &__arrow:not(:last-child) {
+      margin-right: 10px;
+  }
+  &__arrow:hover{
+    background-color: var.$blue-bg;
+    transition: all 0.3s;
+  
+    span{
+      color: var.$white-font;
+    }
+  }
+}
+
+// ボタン
+.c-button{
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 8px 68px;
+  border: solid 1px var.$blue-font;
+  box-shadow: 4px 4px 4px rgba($color: var.$black-bg, $alpha: 0.5);
+  border-radius: 45px;
+  color: var.$white-font;
+  background-color: var.$blue-font;
+  font-size: 30px;
+  font-family: var.$font-ja;
+  font-weight: bold;
+}
+@media screen and (max-width:920px) {
+    .c-button{
+      width: fit-content;
+      margin: 30px auto 0;
+      padding: 7px 55px;
+      font-size: 20px;
+    }
+}
+
+// フェードイン画面
+.loading {
+  width: 100%;
+  height: 100vh;
+  background-color: var.$blue-bg;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+
+  &__inner{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  &__load {
+    color: var.$yellow-font;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: var.$font-en;
+  }
+  &__logo {
+    margin: 30px auto 0;
+    width: 300px;
+    height: 300px;
+  }
+  &__percent {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    svg:not(:root){
+      overflow: hidden;
+    }
+
+    .progressbar-text{
+      margin-top: 20px;
+      text-align: center;
+      color: var.$yellow-font;
+      font-size: 50px;
+      font-weight: bold;
+      font-style: italic;
+      font-family: var.$font-en;
+    }
+  
+  }
+
+}
+@media screen and (max-width:768px) {
+  .loading {
+  
+    &__inner{
+      top: 50%;
+    }
+    
+    &__load {
+      font-size: 40px;
+      white-space: nowrap;
+    }
+    &__logo {
+      margin: 20px auto 0;
+      width: 250px;
+      height: 250px;
+    }
+    &__percent {
+      position: absolute;
+      top: 84%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      svg:not(:root){
+        overflow: hidden;
+      }
+  
+      .progressbar-text{
+        margin-top: 30px;
+        font-size: 40px;
+      }
+    
+    }
+  
+  }
+}
+
+// フェードイン
+.fadeIn {
+  transform: translate3d(0, 50px, 0);
+  transition: 1s;
+  opacity: 0;
+}
+.fadeIn.animated {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }

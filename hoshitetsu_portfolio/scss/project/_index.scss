@@ -1,2 +1,293 @@
 // 変数読み込み
 @use "../common/variable" as var;
+
+// 間隔調整
+#index{
+    #greeting,
+    #profile,
+    #works,
+    #news{
+        margin: 200px auto;
+    }
+}
+@media screen and (max-width:920px) {
+    #index{
+        #greeting,
+        #profile,
+        #works,
+        #news{
+            margin: 150px auto;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    #index{
+        #greeting,
+        #profile,
+        #works,
+        #news{
+            margin: 100px auto;
+        }
+    }
+}
+
+// fv
+.p-top-fv {
+    width: 100%;
+    height: calc(100vh - 90px);
+
+    // 背景画像
+    background-image: url(../img/top-fv-pc.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__inner {
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        // 位置調整
+        position: relative;
+    }
+    &__title {
+        color: var.$white-font;
+        font-size: 60px;
+        font-weight: bold;
+        font-family: var.$font-ja;
+        text-shadow: 4px 4px 4px var.$yellow-font;
+
+        // 位置調整
+        position: absolute;
+        bottom: 85px;
+        left: 20px;
+    }
+}
+@media screen and (max-width:920px) {
+    .p-top-fv {
+        // 背景画像
+        background-image: url(../img/top-fv-sp.png);
+        background-position: center top;
+        background-size: cover;
+        &__title {
+            font-size: 60px;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .p-top-fv {
+        height: calc(100vh - 70px);
+        &__title {
+            font-size: 30px;
+            line-height: 40px;
+
+            // 位置調整
+            bottom: 10%;
+        }
+    }
+}
+
+
+// ご挨拶
+.p-top-greeting {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__left {
+        width: 50%;
+    }
+    &__text {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: var.$font-ja;
+        span{
+            color: var.$blue-font;
+        }
+    }
+    &__right {
+        width: 45%;
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width:920px) {
+    .p-top-greeting {
+        &__content {
+            margin-top: 30px;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .p-top-greeting {
+        &__text {
+            margin-top: 0px;
+            font-size: 16px;
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .p-top-greeting {
+        &__content {
+            flex-direction: column-reverse;
+        }
+        &__left {
+            margin-top: 30px;
+            width: 100%;
+        }
+        &__right {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
+
+
+// プロフィール
+.p-top-profile {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__left {
+        width: 45%;
+        margin-right: 5%;
+    }
+    &__right {
+        width: calc(100% - 50%);
+    }
+    &__data,
+    &__text {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: var.$font-ja;
+    }
+}
+@media screen and (max-width:920px) {
+    .p-top-profile {
+        &__content {
+            margin-top: 30px;
+        }
+        &__data{
+            margin-top: 0;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .p-top-profile {
+        &__data{
+            font-size: 16px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .p-top-profile {
+        &__content {
+            margin-top: 30px;
+            display: block;
+        }
+        &__left{
+            width: 100%;
+            margin-top: 30px;
+        }
+        &__right{
+            margin-top: 30px;
+            width: 100%;
+        }
+        &__data{
+            font-size: 16px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
+
+// 実績一覧
+.p-top-works {
+    &__desc {
+        margin: 50px auto 0;
+        width: fit-content;
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: var.$font-ja;
+    }
+
+    // サムネぐるぐる
+    &__slider {
+        width: 90%;
+        margin: 50px auto 0; 
+        &__img {
+            width:40vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+            height:auto;
+        }
+        
+        .slick-slide {
+          transform: scale(0.9);/*左右の画像のサイズを80%に*/
+          transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+          opacity: 0.5;/*透過50%*/
+        }
+        
+        .slick-slide.slick-center{
+          transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+          opacity: 1;/*透過なし*/
+        }
+    }
+    
+    &__button {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .p-top-works {
+        &__desc {
+            margin: 30px auto 0;
+            width: fit-content;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: var.$font-ja;
+        }
+        &__slider {
+            width: 94%;
+            margin-top: 30px; 
+            &__img {
+                width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+                height:auto;
+            }
+        }
+        &__button {
+            margin-top: 30px;
+        }
+    }
+}
+
+// お知らせ
+.p-top-news {
+    
+    &__list {
+        margin-top: 50px;
+    }
+    &__button {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .p-top-news {
+        &__list {
+            margin-top: 30px;
+        }
+        &__button {
+            margin-top: 30px;
+        }
+    }
+}
+
+

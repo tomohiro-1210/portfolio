@@ -33,6 +33,12 @@
             font-weight: bold;
             font-family: var.$font-en;
         }
+        a:hover{
+            color: var.$yellow-font;
+            text-decoration: underline;
+            opacity: 1;
+            transition: all 0.3s;
+        }
     }
     &__menu-item:not(:last-child) {
         margin-right: 20px;

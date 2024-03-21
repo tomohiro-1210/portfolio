@@ -5,6 +5,13 @@
     width: 100%;
     height: 90px;
     background-color: var.$blue-bg;
+    
+    // 位置調整
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
     // インナー
     &__inner {
         max-width: 1200px;
@@ -18,6 +25,7 @@
     // サイトロゴ
     .site-logo{
         opacity: 1;
+        transition: all 0.3s;
     }
     .site-logo.hide{
         opacity: 0;
@@ -38,6 +46,12 @@
             font-weight: bold;
             font-family: var.$font-en;
         }
+        a:hover{
+            color: var.$yellow-font;
+            text-decoration: underline;
+            opacity: 1;
+            transition: all 0.3s;
+        }
     }
     &__menu-item:not(:last-child) {
         margin-right: 20px;
@@ -45,15 +59,18 @@
     &__hamburgur {
         height: 28px;
         width: 50px;
+        transition: all 0.3s;
         span{
             display: block;
             width: 50px;
             height: 4px;
             border-radius: 2px;
             background-color: var.$yellow-bg;
+            transition: all 0.3s;
         }
         span:nth-child(2n){
             margin: 8px 0;
+            transition: all 0.3s;
         }
     }
     &__hamburgur.open{
@@ -62,7 +79,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(30deg);
+            transform: translate(-50%, -50%) rotate(-30deg);
         }
         span:nth-child(2n){
             display: none;
@@ -71,7 +88,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(-30deg);
+            transform: translate(-50%, -50%) rotate(30deg);
         }
 
     }
@@ -83,6 +100,7 @@
         font-weight: bold;
         font-family: var.$font-en;
         margin-top: 3px;
+        transition: all 0.3s;
     }
     &__menu{
         display: block;
