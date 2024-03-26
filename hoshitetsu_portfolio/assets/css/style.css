@@ -376,7 +376,7 @@ a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 30px auto 0;
+  margin: 34px auto 0;
   padding: 8px 68px;
   border: solid 1px #0C2C83;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
@@ -386,6 +386,11 @@ a {
   font-size: 30px;
   font-family: "Noto Serif JP", serif;
   font-weight: bold;
+  transition: all 0.3s;
+}
+
+.c-button:hover {
+  box-shadow: none;
 }
 
 @media screen and (max-width: 920px) {
